@@ -70,7 +70,8 @@ public class ConsumptionActivity extends Activity {
     private List<ProductInfo> consumableProducts = new ArrayList<ProductInfo>();
 
     // The product ID array of products to be purchased.
-    private static final String[] CONSUMABLES = new String[]{"CProduct01", "CProduct02"};
+//    private static final String[] CONSUMABLES = new String[]{"CProduct01", "CProduct02"};
+    private static final String[] CONSUMABLES = new String[]{"testConsumable1"};
 
     // The Adapter for consumableProductsListview.
     private ProductListAdapter adapter;
@@ -134,6 +135,7 @@ public class ConsumptionActivity extends Activity {
                 }
                 if (result.getProductInfoList() != null) {
                     consumableProducts = result.getProductInfoList();
+                    Log.d(TAG, "iap products >> "+ consumableProducts.size());
                 }
                 showProducts();
             }
@@ -332,21 +334,19 @@ public class ConsumptionActivity extends Activity {
                                 String path = deepLink.getLastPathSegment();
                                 Log.d(TAG, "deeplink >> "+ deepLink);
                                 Log.d(TAG, "deepLink.getLastPathSegment() >> "+ deepLink.getLastPathSegment());
-                                if (path.contains("iap")) {
-//                                    Intent intent = new Intent(getBaseContext(), DetailActivity.class);
-//                                    for (String name : deepLink.getQueryParameterNames()) {
-//                                        intent.putExtra(name, deepLink.getQueryParameter(name));
-//                                    }
-//                                    startActivity(intent);
-                                    buy(0);
+
+                                for (String name : deepLink.getQueryParameterNames()) {
+                                    String queryParam = deepLink.getQueryParameter(name);
+                                    Log.d(TAG, "deepLink.getQueryParameter(name) >> " + queryParam);
+
+                                    if(name.contains("id")){
+                                        try{
+                                            buy(0);
+                                        }catch(Exception e){
+                                            Log.d(TAG, "buy error >> "+e);
+                                        }
+                                    }
                                 }
-//                                if ("setting".equals(path)) {
-//                                    Intent intent = new Intent(getBaseContext(), SettingActivity.class);
-//                                    for (String name : deepLink.getQueryParameterNames()) {
-//                                        intent.putExtra(name, deepLink.getQueryParameter(name));
-//                                    }
-//                                    startActivity(intent);
-//                                }
                             }
                         })
                 .addOnFailureListener(

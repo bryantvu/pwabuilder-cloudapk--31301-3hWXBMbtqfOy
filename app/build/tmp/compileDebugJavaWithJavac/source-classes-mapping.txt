@@ -45,12 +45,12 @@ com/ychen9/pwa/common/ExceptionHandle.java
  com.ychen9.pwa.common.ExceptionHandle
 com/ychen9/pwa/Application.java
  com.ychen9.pwa.Application
+com/ychen9/pwa/adapter/BillListAdapter.java
+ com.ychen9.pwa.adapter.BillListAdapter
+ com.ychen9.pwa.adapter.BillListAdapter$BillListViewHolder
 com/ychen9/pwa/ConsumptionActivity.java
  com.ychen9.pwa.ConsumptionActivity
  com.ychen9.pwa.ConsumptionActivity$1
  com.ychen9.pwa.ConsumptionActivity$2
  com.ychen9.pwa.ConsumptionActivity$3
  com.ychen9.pwa.ConsumptionActivity$4
-com/ychen9/pwa/adapter/BillListAdapter.java
- com.ychen9.pwa.adapter.BillListAdapter
- com.ychen9.pwa.adapter.BillListAdapter$BillListViewHolder
