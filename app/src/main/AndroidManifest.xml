@@ -37,14 +37,14 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Translucent.NoTitleBar">
 
-        <meta-data
-            android:name="com.huawei.hms.client.appid"
-            android:value="appid=102882631">
-        </meta-data>
-        <meta-data
-            android:name="com.huawei.hms.client.cpid"
-            android:value="cpid=890001000000000755">
-        </meta-data>
+<!--        <meta-data-->
+<!--            android:name="com.huawei.hms.client.appid"-->
+<!--            android:value="appid=102882631">-->
+<!--        </meta-data>-->
+<!--        <meta-data-->
+<!--            android:name="com.huawei.hms.client.cpid"-->
+<!--            android:value="cpid=890001000000000755">-->
+<!--        </meta-data>-->
         <meta-data
             android:name="asset_statements"
             android:resource="@string/assetStatements" />
@@ -140,19 +140,6 @@
 <!--                    android:host="@string/hostName"/>-->
 <!--            </intent-filter>-->
 
-        </activity>
-
-        <activity
-            android:name="com.ychen9.pwa.ConsumptionActivity"
-            android:theme="@style/NoActionBar" >
-
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <!-- Add the prefix of the deep link of App Linking or Android and a custom scheme. -->
-                <data android:host="bvutestiap.dre.agconnect.link" android:scheme="testlink"/>
-            </intent-filter>
         </activity>
 
         <activity android:name="com.google.androidbrowserhelper.trusted.FocusActivity" />

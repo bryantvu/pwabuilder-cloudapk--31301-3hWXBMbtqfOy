@@ -152,19 +152,19 @@ android {
         resValue "string", "orientation", twaManifest.orientation
     }
     signingConfigs {
-        config {
-            storeFile file('./debug.keystore')
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-            storePassword 'android'
-        }
+//        config {
+//            storeFile file('./debug.keystore')
+//            keyAlias 'androiddebugkey'
+//            keyPassword 'android'
+//            storePassword 'android'
+//        }
     }
     buildTypes {
         debug {
-            signingConfig signingConfigs.config
+//            signingConfig signingConfigs.config
         }
         release {
-            signingConfig signingConfigs.config
+//            signingConfig signingConfigs.config
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
